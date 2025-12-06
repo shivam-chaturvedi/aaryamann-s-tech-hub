@@ -7,8 +7,6 @@ import { MapPin, Mail, Github, Linkedin, Phone, Send, GraduationCap, Award, Book
 import type { Project } from "@/data/portfolio";
 import { useToast } from "@/hooks/use-toast";
 import { Footer } from "@/components/Footer";
-import profilePlaceholder from "@/assets/profile-placeholder.jpg";
-
 const Index = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeFilter, setActiveFilter] = useState<string>("all");
@@ -44,15 +42,23 @@ const Index = () => {
     }));
   };
 
+  const programExperiences = [
+    ...aboutData.enrichmentPrograms,
+    ...aboutData.codingExperiences,
+    ...aboutData.engineeringExperiences,
+    aboutData.aiClub,
+    aboutData.researchProject,
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1">
         {/* Hero Banner */}
         <section className="relative h-64 md:h-80 overflow-hidden">
           <img
-            src="/hero-banner.jpg"
+            src="/projects/spider-bot/img6.jpeg"
             alt="Spider Bot hero"
-            className="w-full h-full object-cover transform "
+            className="w-full h-full object-cover transform -rotate-6"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
         </section>
@@ -66,7 +72,7 @@ const Index = () => {
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-4 border-background shadow-xl">
                   <video
                     src="/projects/spider-bot/Spider_Bot_video.mp4"
-                    className="w-full h-full object-cover transform scale-120"
+                    className="w-full h-full object-cover transform scale-105"
                     autoPlay
                     muted
                     playsInline
@@ -125,6 +131,149 @@ const Index = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Detailed Profile */}
+        <section className="py-16 bg-secondary/10">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+              Detailed Profile
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mb-10">
+              All the credentials, programs, leadership experiences, and interests that support the Spider Bot narrative.
+            </p>
+
+            <div className="grid gap-6 lg:grid-cols-2">
+              <Card icon={<MapPin />} title="Location & Contact">
+                <p className="text-sm text-muted-foreground">{aboutData.address}</p>
+                <p className="mt-4 text-sm text-muted-foreground">{aboutData.contactLine}</p>
+              </Card>
+              <Card icon={<GraduationCap />} title="Education & Credentials">
+                <p className="text-sm text-muted-foreground">{aboutData.educationDetails.institution}</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                  {aboutData.educationDetails.period} · {aboutData.educationDetails.graduation}
+                </p>
+                <div className="mt-4 grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                  {aboutData.educationDetails.grades.map((grade) => (
+                    <span key={grade}>{grade}</span>
+                  ))}
+                </div>
+                <div className="mt-4 space-y-2">
+                  <p className="text-xs uppercase tracking-[0.4em] text-accent">Standardized Tests</p>
+                  {aboutData.standardizedTests.map((test) => (
+                    <p key={test} className="text-sm text-foreground">
+                      {test}
+                    </p>
+                  ))}
+                </div>
+                <div className="mt-4 space-y-2">
+                  <p className="text-xs uppercase tracking-[0.4em] text-accent">Additional Courses</p>
+                  {aboutData.additionalCourses.map((course) => (
+                    <p key={course} className="text-sm text-muted-foreground">
+                      {course}
+                    </p>
+                  ))}
+                </div>
+              </Card>
+            </div>
+
+            <div className="grid gap-6 mt-6 lg:grid-cols-2">
+              <Card icon={<Award />} title="Programs & Research">
+                <div className="space-y-6">
+                  {programExperiences.map((program) => (
+                    <div key={program.title} className="space-y-2 border-b border-border pb-4 last:border-b-0 last:pb-0">
+                      <div className="flex items-center justify-between text-xs uppercase tracking-[0.4em] text-muted-foreground">
+                        <span className="text-foreground">{program.title}</span>
+                        <span>{program.period}</span>
+                      </div>
+                      <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                        {program.bullets.map((bullet) => (
+                          <li key={bullet}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+              <Card icon={<Users />} title="Leadership & Community">
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.4em] text-accent mb-2">Leadership Roles</p>
+                    <div className="space-y-4">
+                      {aboutData.leadershipRoles.map((role) => (
+                        <div key={role.title}>
+                          <div className="flex items-center justify-between text-sm font-semibold text-foreground">
+                            <span>{role.title}</span>
+                            <span className="text-xs text-muted-foreground">{role.period}</span>
+                          </div>
+                          <ul className="list-disc pl-5 text-sm text-muted-foreground">
+                            {role.bullets.map((bullet) => (
+                              <li key={bullet}>{bullet}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.4em] text-accent mb-2">Competitions</p>
+                    <div className="space-y-4">
+                      {aboutData.competitions.map((item) => (
+                        <div key={item.title}>
+                          <div className="flex justify-between text-sm font-semibold text-foreground">
+                            <span>{item.title}</span>
+                            <span className="text-xs text-muted-foreground">{item.period}</span>
+                          </div>
+                          <ul className="list-disc pl-5 text-sm text-muted-foreground">
+                            {item.bullets.map((bullet) => (
+                              <li key={bullet}>{bullet}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.4em] text-accent mb-2">Community Service</p>
+                    <div className="space-y-4">
+                      {aboutData.communityService.map((item) => (
+                        <div key={item.title}>
+                          <div className="flex justify-between text-sm font-semibold text-foreground">
+                            <span>{item.title}</span>
+                            <span className="text-xs text-muted-foreground">{item.period}</span>
+                          </div>
+                          <ul className="list-disc pl-5 text-sm text-muted-foreground">
+                            {item.bullets.map((bullet) => (
+                              <li key={bullet}>{bullet}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            <div className="mt-6">
+              <Card icon={<BookOpen />} title="Languages, Tools & Hobbies">
+                <div className="space-y-4 text-sm text-muted-foreground">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.4em] text-accent">Languages</p>
+                    <p>{aboutData.personalInterests.languages.join(" · ")}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.4em] text-accent">Tools & Skills</p>
+                    <p>{aboutData.personalInterests.tools.join(" · ")}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.4em] text-accent">Hobbies</p>
+                    <p>{aboutData.personalInterests.hobbies.join(" · ")}</p>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </section>

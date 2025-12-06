@@ -390,6 +390,8 @@ export const aboutData = {
   name: "Aaryamann Goenka",
   title: "Young Engineer | Robotics & AI Innovator | Research & IoT Developer",
   bio: "Young technologist specializing in robotics, IoT systems, AI prototypes, sensor networks, and disaster-response engineering. Passionate about building machines and systems that solve real-world problems.",
+  address: "Vasant Sagar, 5th Floor, Churchgate, A Road, Mumbai 400020",
+  contactLine: "aaryamann.2771@bis.edu.in | +91 8291817701",
   technicalBackground: [
     "Arduino, ESP32, IoT automation",
     "3D designing, VR in Unity",
@@ -425,6 +427,152 @@ export const aboutData = {
     "Founder, AI Club",
     "Logistics Head, Engineering Club"
   ]
+  ,
+  educationDetails: {
+    institution: "Bombay International School, Mumbai, India",
+    graduation: "Anticipated Graduation: 2027",
+    period: "Jul 2023 - Jul 2024",
+    grades: [
+      "English – A*",
+      "English Literature – A*",
+      "Hindi – A",
+      "History – A*",
+      "Chemistry – A*",
+      "Physics – A*",
+      "Integrated Mathematics – A*",
+      "Computer Science – A*"
+    ]
+  },
+  standardizedTests: [
+    "AP Microeconomics – Scheduled July 2024"
+  ],
+  additionalCourses: [
+    "Communication Skills (Grade 5), Trinity (expected completion: Jun 2024)",
+    "Meditation course with Art of Living (2021)"
+  ],
+  enrichmentPrograms: [
+    {
+      title: "Seven Oaks Summer Programme, London",
+      period: "Jul 2023",
+      bullets: [
+        "Modules: Critical Thinking, Social Leadership, Creativity, and Digital Skills.",
+        "Programmed and flew Tello Edu drones while mastering CAD/CAM via 2Ddesign software.",
+        "Contributed to a group campaign to clean Mumbai waters and enacted Shakespeare scenes."
+      ]
+    }
+  ],
+  codingExperiences: [
+    {
+      title: "Coding & More",
+      period: "Jun 2021 - Present",
+      bullets: [
+        "Completed 2 modules of AI with Python (20 hours) under Supriya Bhuwalka.",
+        "Built AI projects: COVID-19 detection with X-ray, Chatbot, Bitcoin price prediction, handwriting recognition.",
+        "Developed UNSDG Climate Action demo for Girls in India AI 2021 and a gender equality project on International Women’s Day."
+      ]
+    }
+  ],
+  engineeringExperiences: [
+    {
+      title: "Maker’s Asylum residency",
+      period: "Jun 2023 - Dec 2023",
+      bullets: [
+        "40-hour residency covering 3D design, Unity VR, Arduino, soldering, PCB design, and NodeMCU connectivity.",
+        "Built an IoT smart compost bin project during the program."
+      ]
+    }
+  ],
+  aiClub: {
+    title: "Founder, AI Club",
+    period: "Jan 2023 - Jan 2024",
+    bullets: [
+      "Launched a school-level AI club with Coding & More through a franchise partnership.",
+      "Coordinated communication between school leadership and the industry partner to run the club smoothly."
+    ]
+  },
+  researchProject: {
+    title: "IRIS National Science Fair Project",
+    period: "Sep 2023 - Oct 2023",
+    bullets: [
+      "Led a study on the erosive effects of common beverages on tooth enamel using eggshell models.",
+      "Explored material science principles tied to public health and submitted the work to IRIS 2023."
+    ]
+  },
+  leadershipRoles: [
+    {
+      title: "Head Boy, Bombay International School",
+      period: "Jan 2024 - Present",
+      bullets: [
+        "Represented the student body and bridged communication with faculty.",
+        "Introduced assembly speakers and oversaw logistics for major events."
+      ]
+    },
+    {
+      title: "Tech Secretary, Bombay International School",
+      period: "Jan 2023 - Jan 2024",
+      bullets: [
+        "Led all tech activities including audio-visual operations and student government site content.",
+        "Spearheaded the BIS Technology Fest “tech for all” with panels, workshops, and a tech escape room."
+      ]
+    },
+    {
+      title: "Logistics Head, Engineering Club",
+      period: "Jan 2024 - Present",
+      bullets: [
+        "Organized workshops, field visits, and speaker series encouraging early engagement in engineering."
+      ]
+    }
+  ],
+  competitions: [
+    {
+      title: "Hong Kong International Science Olympiad",
+      period: "Mar 2024 - Apr 2024",
+      bullets: ["Earned a Silver Medal."]
+    },
+    {
+      title: "Singapore & Asian School Mathematics Olympiad",
+      period: "Apr 2024",
+      bullets: ["Attempted contest; results pending."]
+    },
+    {
+      title: "Pascal Contest, University of Waterloo",
+      period: "Feb 2024",
+      bullets: ["Secured a Distinction."]
+    }
+  ],
+  communityService: [
+    {
+      title: "Student Ambassador, Brush of Hope",
+      period: "Apr 2024 - Present",
+      bullets: [
+        "Planning an anti-bullying campaign featuring an exhibit focused on cyberbullying.",
+        "Launching a cyberbullying week capped with an expert panel and awareness website."
+      ]
+    },
+    {
+      title: "Tech Miracle",
+      period: "Apr 2024 - Present",
+      bullets: ["Preparing to teach tech skills to underprivileged communities."]
+    },
+    {
+      title: "Farmer Awareness Drive",
+      period: "Apr 2024 - Present",
+      bullets: [
+        "Interning (planned) at Chemco Plastics to develop sustainable pond liners.",
+        "Designing a farmer awareness campaign around water-saving solutions."
+      ]
+    }
+  ],
+  personalInterests: {
+    languages: ["English (Fluent)", "Hindi (Fluent)"],
+    tools: ["Microsoft Office", "Mac OS", "G-Suite", "Python", "Scratch", "C", "Arduino", "HTML"],
+    hobbies: [
+      "Badminton",
+      "Martial Arts",
+      "Rock & Pop Guitar (Trinity College Grade 1 with Merit)",
+      "Trekking (New Hampshire Backpacking Adventure, NOLS, July 2024)"
+    ]
+  }
 };
 
 export const contactData = {
