@@ -112,7 +112,7 @@ const Index = () => {
                   <h1 className="text-2xl md:text-4xl font-display font-bold text-foreground">
                     {aboutData.name}
                   </h1>
-                  <span className="text-2xl">🇮🇳</span>
+                  <span className="text-2xl">🪴 🤖 🌊</span>
                 </div>
                 
                 <p className="text-muted-foreground text-sm md:text-base mb-4 max-w-2xl">
