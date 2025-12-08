@@ -190,8 +190,14 @@ export const projects: Project[] = [
         { type: "image", src: "/projects/compost/compost-bin-05.jpeg", label: "Control view" },
         {
           type: "video",
-          src: "/projects/compost/videos/khadify_field_test-01.mp4",
-          label: "Field test run",
+          src: "/projects/compost/videos/Khadify_DemoVideo_2025.mp4",
+          label: "Khadify Demo 2025",
+          description: "Latest end-to-end demo of the smart compost system (automation + dashboard).",
+        },
+        {
+          type: "pdf",
+          src: "/docs/Khadify_PPT_Submission.pdf",
+          label: "Khadify Project Deck",
         },
       ],
     },
