@@ -23,12 +23,18 @@ const Index = () => {
   });
   
   const heroImages = useMemo(() => [
-    { src: "/projects/fsai/beetlebot_at_fsai-01.jpeg", caption: "FSAI Conference - Team Presentation" },
-    { src: "/projects/fsai/beetlebot_at_fsai-02.jpeg", caption: "FSAI Conference - Engineering Discussion" },
-    { src: "/projects/fsai/beetlebot_at_fsai-03.jpeg", caption: "FSAI Conference - Technical Demo" },
-    { src: "/projects/fsai/beetlebot_at_fsai-04.jpeg", caption: "FSAI Conference - Industry Leaders" },
-    { src: "/projects/fsai/beetlebot_at_fsai-05.jpeg", caption: "FSAI Conference - Networking Session" },
-    { src: "/projects/fsai/beetlebot_at_fsai-06.jpeg", caption: "FSAI Conference - Project Showcase" },
+    { src: "/projects/fsai/beetlebot_at_fsai-02.jpeg", caption: "BeetleBot - FSAI Conference" },
+    { src: "/projects/compost/compost-bin-01.jpeg", caption: "Khadify - Compost Bin Sensor Deck" },
+    { src: "/projects/fsai/beetlebot_at_fsai-05.jpeg", caption: "BeetleBot - FSAI Presentation" },
+    { src: "/projects/compost/compost-bin-02.jpeg", caption: "Khadify - Aeration Setup" },
+    { src: "/projects/fsai/beetlebot_at_fsai-11.jpeg", caption: "BeetleBot - FSAI Demo" },
+    { src: "/projects/compost/compost-bin-04.jpeg", caption: "Khadify - System Overview" },
+    { src: "/projects/cyberdost-1.jpeg", caption: "CyberDost - Cyberbullying Advocacy" },
+    { src: "/projects/compost/compost-bin-08.jpeg", caption: "Khadify - Field Testing" },
+    { src: "/projects/fsai/fsai-speaker.jpeg", caption: "FSAI - Speaker Session" },
+    { src: "/projects/compost/compost-bin-11.jpeg", caption: "Khadify - Compost Quality Analysis" },
+    { src: "/projects/compost/compost-bin-12.jpeg", caption: "Khadify - Final Product" },
+    { src: "/projects/compost/compost-bin-11.jpeg", caption: "Khadify - Compost Quality Analysis" },
   ], []);
   
   useEffect(() => {
