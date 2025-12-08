@@ -35,10 +35,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-full h-full sm:w-[96vw] sm:h-auto sm:max-w-4xl sm:max-h-[90vh] p-0 overflow-hidden">
-        <ScrollArea className="h-full sm:max-h-[90vh]">
+      <DialogContent className="w-full h-full sm:w-[96vw] sm:h-auto sm:max-w-4xl sm:max-h-[90vh] p-0 overflow-hidden flex flex-col">
+        <ScrollArea className="flex-1 overflow-y-auto">
           {/* Hero Media */}
-          <div className="relative aspect-video sm:max-h-[420px] h-[40vh] sm:h-auto">
+          <div className="relative aspect-video sm:max-h-[420px] h-[30vh] sm:h-auto">
             {isHeroVideo ? (
               <video
                 controls
@@ -62,20 +62,20 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             <DialogClose asChild>
               <button
                 onClick={onClose}
-                className="absolute top-2 right-2 sm:top-3 sm:right-3 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center hover:bg-background active:bg-background transition-colors shadow-lg z-10"
+                className="absolute top-2 right-2 sm:top-3 sm:right-3 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 flex items-center justify-center transition-colors shadow-lg z-20 border-2 border-black/20"
                 aria-label="Close project"
               >
-                <X size={18} className="sm:w-5 sm:h-5" />
+                <X size={16} className="sm:w-5 sm:h-5 text-black font-bold" strokeWidth={3} />
               </button>
             </DialogClose>
 
             {/* Title Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-              <span className="px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full bg-accent text-accent-foreground mb-2 sm:mb-3 inline-block">
+            <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6">
+              <span className="px-2 py-0.5 sm:px-3 sm:py-1 text-[9px] sm:text-xs font-medium rounded-full bg-accent text-accent-foreground mb-1.5 sm:mb-3 inline-block">
                 {project.category}
               </span>
               <DialogHeader>
-                <DialogTitle className="text-lg sm:text-2xl md:text-3xl font-display text-foreground leading-tight">
+                <DialogTitle className="text-base sm:text-2xl md:text-3xl font-display text-foreground leading-tight">
                   {project.title}
                 </DialogTitle>
               </DialogHeader>
@@ -83,45 +83,46 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           </div>
 
           {/* Content */}
-          <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
+          <div className="p-3 sm:p-6 space-y-3 sm:space-y-6">
             {/* Tags */}
-            <div className="flex flex-wrap gap-1.5 sm:gap-2">
+            <div className="flex flex-wrap gap-1 sm:gap-2">
               {project.tags.map((tag) => (
-                <span key={tag} className="skill-badge pointer-events-none cursor-default text-[10px] sm:text-xs px-2 py-1 sm:px-3 sm:py-1.5">
+                <span key={tag} className="skill-badge pointer-events-none cursor-default text-[9px] sm:text-xs px-1.5 py-0.5 sm:px-3 sm:py-1.5">
                   {tag}
                 </span>
               ))}
             </div>
 
             {/* Summary */}
-            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+            <p className="text-muted-foreground leading-relaxed text-xs sm:text-base">
               {project.summary}
             </p>
 
             {/* PDFs */}
             {pdfMedia.length > 0 && (
               <Section title="Supporting Documents">
-                <Accordion type="single" collapsible className="w-full space-y-2">
+                <Accordion type="single" collapsible className="w-full space-y-1.5 sm:space-y-2">
                   {pdfMedia.map((doc, idx) => (
                     <AccordionItem key={`${project.id}-pdf-${idx}`} value={`${project.id}-pdf-${idx}`} className="border border-border rounded-lg">
-                      <AccordionTrigger className="px-4 py-3 text-left">
-                        <div className="flex items-center justify-between w-full gap-4">
-                          <span className="font-medium text-foreground">{doc.label ?? "Document"}</span>
+                      <AccordionTrigger className="px-2 sm:px-4 py-2 sm:py-3 text-left">
+                        <div className="flex items-center justify-between w-full gap-2 sm:gap-4">
+                          <span className="font-medium text-foreground text-xs sm:text-base">{doc.label ?? "Document"}</span>
                           <a
                             href={doc.src}
                             download
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm px-3 py-1 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors"
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-[10px] sm:text-sm px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors"
                           >
                             Download
                           </a>
                         </div>
                       </AccordionTrigger>
-                      <AccordionContent className="px-2 sm:px-4 pb-3 sm:pb-4">
+                      <AccordionContent className="px-2 sm:px-4 pb-2 sm:pb-4">
                         <div className="border border-border rounded-lg overflow-hidden bg-card">
-                          <object data={doc.src} type="application/pdf" className="w-full h-64 sm:h-96">
-                            <p className="p-3 sm:p-4 text-xs sm:text-sm text-muted-foreground">
+                          <object data={doc.src} type="application/pdf" className="w-full h-48 sm:h-96">
+                            <p className="p-2 sm:p-4 text-[10px] sm:text-sm text-muted-foreground">
                               PDF preview unavailable.{" "}
                               <a href={doc.src} target="_blank" rel="noopener noreferrer" className="text-accent underline">
                                 Open in new tab
@@ -152,39 +153,39 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                           index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
                         }`}
                       >
-                        <div className="w-full md:w-1/2 overflow-hidden rounded-xl sm:rounded-3xl border border-border bg-card shadow-sm">
+                        <div className="w-full md:w-1/2 overflow-hidden rounded-lg sm:rounded-3xl border border-border bg-card shadow-sm">
                           {media.type === "image" ? (
                             <img
                               src={media.src}
                               alt={media.label}
-                              className="w-full h-full min-h-[200px] sm:min-h-[320px] object-cover"
+                              className="w-full h-full min-h-[150px] sm:min-h-[320px] object-cover"
                               loading="lazy"
                             />
                           ) : (
                             <video
                               controls
                               playsInline
-                              className="w-full h-full min-h-[200px] sm:min-h-[320px] object-cover"
+                              className="w-full h-full min-h-[150px] sm:min-h-[320px] object-cover"
                             >
                               <source src={media.src} type="video/mp4" />
                               Your browser does not support the video tag.
                             </video>
                           )}
                         </div>
-                        <div className="w-full md:w-1/2 space-y-3 text-left">
+                        <div className="w-full md:w-1/2 space-y-2 sm:space-y-3 text-left">
                           {block.subtitle && (
-                            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-accent">
+                            <p className="text-[9px] sm:text-xs font-semibold uppercase tracking-[0.3em] sm:tracking-[0.4em] text-accent">
                               {block.subtitle}
                             </p>
                           )}
-                          <h3 className="text-xl font-semibold text-foreground">
+                          <h3 className="text-base sm:text-xl font-semibold text-foreground">
                             {block.title}
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                             {block.text}
                           </p>
                           {block.bullets && block.bullets.length > 0 && (
-                            <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                            <ul className="list-disc pl-4 sm:pl-5 text-xs sm:text-sm text-muted-foreground space-y-0.5 sm:space-y-1">
                               {block.bullets.map((bullet, bulletIndex) => (
                                 <li key={bulletIndex}>{bullet}</li>
                               ))}
@@ -303,7 +304,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Methodology */}
             {project.content.methodology && (
               <Section title="Methodology">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-muted-foreground leading-relaxed text-xs sm:text-base">
                   {project.content.methodology}
                 </p>
               </Section>
@@ -312,7 +313,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Results */}
             {project.content.results && (
               <Section title="Results & Conclusion">
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-muted-foreground leading-relaxed text-xs sm:text-base">
                   {project.content.results}
                 </p>
               </Section>
@@ -364,9 +365,9 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
 function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="space-y-2 sm:space-y-3">
-      <h3 className="font-display font-semibold text-base sm:text-lg text-foreground flex items-center gap-2">
-        <span className="w-0.5 sm:w-1 h-4 sm:h-6 bg-accent rounded-full" />
+    <div className="space-y-1.5 sm:space-y-3">
+      <h3 className="font-display font-semibold text-sm sm:text-lg text-foreground flex items-center gap-1.5 sm:gap-2">
+        <span className="w-0.5 sm:w-1 h-3 sm:h-6 bg-accent rounded-full" />
         {title}
       </h3>
       {children}
