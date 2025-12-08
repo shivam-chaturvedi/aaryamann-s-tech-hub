@@ -23,12 +23,12 @@ const Index = () => {
   });
   
   const heroImages = useMemo(() => [
-    { src: "/projects/compost/compost-bin-01.jpeg", caption: "Compost Bin - Sensor Deck" },
-    { src: "/projects/spider-bot/img1.jpeg", caption: "BeetleBot - Rescue Robot" },
-    { src: "/projects/compost/compost-bin-02.jpeg", caption: "Compost Bin - Aeration Setup" },
-    { src: "/projects/spider-bot/img4.jpeg", caption: "BeetleBot - In Motion" },
-    { src: "/projects/compost/compost-bin-05.jpeg", caption: "Compost Bin - Control View" },
-    { src: "/projects/spider-bot/img5.jpeg", caption: "BeetleBot - Night Vision" },
+    { src: "/projects/fsai/beetlebot_at_fsai-01.jpeg", caption: "FSAI Conference - Team Presentation" },
+    { src: "/projects/fsai/beetlebot_at_fsai-02.jpeg", caption: "FSAI Conference - Engineering Discussion" },
+    { src: "/projects/fsai/beetlebot_at_fsai-03.jpeg", caption: "FSAI Conference - Technical Demo" },
+    { src: "/projects/fsai/beetlebot_at_fsai-04.jpeg", caption: "FSAI Conference - Industry Leaders" },
+    { src: "/projects/fsai/beetlebot_at_fsai-05.jpeg", caption: "FSAI Conference - Networking Session" },
+    { src: "/projects/fsai/beetlebot_at_fsai-06.jpeg", caption: "FSAI Conference - Project Showcase" },
   ], []);
   
   useEffect(() => {
@@ -139,7 +139,7 @@ const Index = () => {
                   <h1 className="text-2xl md:text-4xl font-display font-bold text-foreground">
                     {aboutData.name}
                   </h1>
-                  <span className="text-2xl">🪴 🤖 🌊</span>
+                  <span className="text-2xl">🌴 🤖 🌊</span>
                 </div>
                 
                 <p className="text-muted-foreground text-sm md:text-base mb-4 max-w-2xl">
