@@ -431,6 +431,12 @@ export const aboutData = {
     "FTC Think Award + Inspire Award; AI/Engineering club leadership",
     "IGCSE World Topper (Add-Math) + SASMO Gold + HKISO Silver",
   ],
+  education: {
+    school: "",
+    graduation: "",
+    grades: "",
+  },
+  courses: [],
   leadership: [
     "Head Boy, Bombay International School (2024–Present)",
     "Tech Secretary (2023–2024)",
