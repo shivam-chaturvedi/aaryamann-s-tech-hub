@@ -63,7 +63,7 @@ export function ProjectCard({ project, onClick, index }: ProjectCardProps) {
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
           {project.tags.slice(0, 3).map((tag) => (
-            <span key={tag} className="skill-badge text-xs">
+            <span key={tag} className="skill-badge text-xs pointer-events-none cursor-default">
               {tag}
             </span>
           ))}

@@ -1,4 +1,4 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { MediaItem, Project } from "@/data/portfolio";
@@ -35,10 +35,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
+      <DialogContent className="w-[96vw] sm:w-auto max-w-4xl max-h-[90vh] p-0 overflow-hidden">
         <ScrollArea className="max-h-[90vh]">
           {/* Hero Media */}
-          <div className="relative aspect-video">
+          <div className="relative aspect-video max-h-[420px]">
             {isHeroVideo ? (
               <video
                 controls
@@ -59,12 +59,15 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
             
             {/* Close Button */}
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors"
-            >
-              <X size={20} />
-            </button>
+            <DialogClose asChild>
+              <button
+                onClick={onClose}
+                className="absolute top-3 right-3 w-10 h-10 rounded-full bg-background/85 backdrop-blur-sm flex items-center justify-center hover:bg-background transition-colors shadow-md"
+                aria-label="Close project"
+              >
+                <X size={20} />
+              </button>
+            </DialogClose>
 
             {/* Title Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -84,7 +87,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag) => (
-                <span key={tag} className="skill-badge">
+                <span key={tag} className="skill-badge pointer-events-none cursor-default">
                   {tag}
                 </span>
               ))}
