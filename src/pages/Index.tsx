@@ -14,7 +14,16 @@ const Index = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const [heroApi, setHeroApi] = useState<CarouselApi | null>(null);
+  const [isDark, setIsDark] = useState(false);
   const { toast } = useToast();
+  
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDark]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -51,7 +60,8 @@ const Index = () => {
     return () => clearInterval(interval);
   }, [heroApi]);
 
-  const categories = ["all", ...new Set(projects.map((p) => p.category))];
+  const categories = ["all", ...new Set(projects.map((p) => p.category).filter(c => c !== "Spotlight"))];
+  const spotlightProjects = useMemo(() => projects.filter(p => p.category === "Spotlight"), []);
   const spotlightProjects = useMemo(
     () => projects.filter((p) => ["beetlebot", "smart-compost", "coastal-erosion"].includes(p.id)),
     []
@@ -96,6 +106,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Dark Mode Toggle */}
+      <button
+        onClick={() => setIsDark(!isDark)}
+        className="fixed top-4 right-4 z-50 w-12 h-12 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
+        aria-label="Toggle dark mode"
+      >
+        <span className="text-2xl">{isDark ? "🌙" : "☀️"}</span>
+      </button>
       <main className="flex-1">
         {/* Hero Banner */}
         <section className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
@@ -195,14 +213,11 @@ const Index = () => {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-16 bg-secondary/30">
+        <section id="projects" className="pt-0 pb-16 bg-secondary/30">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 animate-slide-up">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8 animate-slide-up">
               Projects
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mb-8 animate-slide-up">
-              Explore my engineering projects spanning robotics, IoT, AI, and cybersecurity.
-            </p>
 
             {/* Filter Tabs */}
             <div className="flex gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">

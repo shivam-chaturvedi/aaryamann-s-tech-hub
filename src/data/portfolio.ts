@@ -232,7 +232,7 @@ export const projects: Project[] = [
     id: "research-innovation",
     title: "Research & Engineering Innovation",
     shortTitle: "Innovation Awards",
-    category: "Research & Awards",
+    category: "Research & Entrepreneurship",
     summary:
       "Captured CREST Gold (materials science enamel study) and Hippo Technotex internship delivering cost/thermal analysis for Cool Roof panels.",
     image: "/projects/spider-bot/img2.jpeg",
@@ -290,7 +290,7 @@ export const projects: Project[] = [
     id: "stem-olympiads",
     title: "STEM Olympiads & Academic Achievements",
     shortTitle: "STEM Honors",
-    category: "Academic Honors",
+    category: "Competitions & Leadership",
     summary:
       "IGCSE World Topper (Additional Math 2025); SASMO Gold; HKISO Silver; Waterloo Pascal Distinction; AP Microeconomics 5 (self-study).",
     image: "/placeholder.svg",
@@ -387,9 +387,9 @@ export const projects: Project[] = [
   },
   {
     id: "leadership-community",
-    title: "Leadership, Service & Expeditions",
+    title: "Service & Expeditions",
     shortTitle: "Leadership & Grit",
-    category: "Leadership & Service",
+    category: "Service & Expeditions",
     summary:
       "Head Boy 2024–25; launched BIS Beholder film festival; executed school events; completed NOLS 65-mile expedition and multiple treks; advanced skier and scuba certified.",
     image: "/hero-banner.jpg",

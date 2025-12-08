@@ -28,10 +28,11 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onClick, index }: ProjectCardProps) {
   const cardMedia = getProjectCardMedia(project);
+  const isSpotlight = project.category === "Spotlight";
   return (
     <div
       onClick={onClick}
-      className="project-card group animate-slide-up"
+      className={`project-card group animate-slide-up ${isSpotlight ? "border-2 border-yellow-500" : ""}`}
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Image */}
@@ -43,12 +44,23 @@ export function ProjectCard({ project, onClick, index }: ProjectCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         
+        {/* Spotlight Badge */}
+        {isSpotlight && (
+          <div className="absolute top-3 left-3">
+            <span className="px-3 py-1 text-xs font-semibold rounded-full bg-yellow-500 text-black flex items-center gap-1">
+              ⭐ Spotlight
+            </span>
+          </div>
+        )}
+        
         {/* Category Badge */}
-        <div className="absolute top-3 left-3">
-          <span className="px-3 py-1 text-xs font-medium rounded-full bg-accent text-accent-foreground">
-            {project.category}
-          </span>
-        </div>
+        {!isSpotlight && (
+          <div className="absolute top-3 left-3">
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-accent text-accent-foreground">
+              {project.category}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Content */}
