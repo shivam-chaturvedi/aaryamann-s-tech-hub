@@ -81,10 +81,18 @@ const Index = () => {
         .filter((entry) => entry.docs.length > 0),
     []
   );
-  const filteredProjects =
-    activeFilter === "all"
+  const filteredProjects = useMemo(() => {
+    let filtered = activeFilter === "all"
       ? projects
       : projects.filter((p) => p.category === activeFilter);
+    
+    // Sort: spotlight projects first, then others
+    return filtered.sort((a, b) => {
+      if (a.category === "Spotlight" && b.category !== "Spotlight") return -1;
+      if (a.category !== "Spotlight" && b.category === "Spotlight") return 1;
+      return 0;
+    });
+  }, [activeFilter]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
