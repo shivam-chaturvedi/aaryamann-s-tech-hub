@@ -322,13 +322,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Sub-Projects (for Cybersecurity) */}
             {project.content.subProjects && project.content.subProjects.length > 0 && (
               <Section title="Project Collection">
-                <div className="grid gap-3 sm:gap-4">
+                <div className="grid gap-2 sm:gap-4">
                   {project.content.subProjects.map((subProject, index) => (
-                    <div key={index} className="p-3 sm:p-4 rounded-lg bg-secondary/50 border border-border">
-                      <h4 className="font-display font-semibold text-foreground mb-1.5 sm:mb-2 text-sm sm:text-base">
+                    <div key={index} className="p-2 sm:p-4 rounded-lg bg-secondary/50 border border-border">
+                      <h4 className="font-display font-semibold text-foreground mb-1 sm:mb-2 text-xs sm:text-base">
                         {subProject.title}
                       </h4>
-                      <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-[10px] sm:text-sm leading-relaxed">
                         {subProject.description}
                       </p>
                     </div>
