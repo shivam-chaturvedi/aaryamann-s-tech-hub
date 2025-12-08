@@ -277,63 +277,87 @@ const Index = () => {
 
         {/* About Section */}
         <section id="about" className="py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-            <div className="space-y-3">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground animate-slide-up">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-8">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
                 About Me
               </h2>
-              <p className="text-foreground/80 text-lg max-w-3xl animate-slide-up">
+              <p className="text-foreground/80 text-base max-w-3xl leading-relaxed">
                 {aboutData.bio}
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <p className="text-sm uppercase tracking-[0.24em] text-foreground/70 font-semibold">Expertise</p>
-                  <h3 className="text-xl font-display font-semibold text-foreground">Technical Background</h3>
-                  <ul className="space-y-2 text-foreground/90">
-                    {aboutData.technicalBackground.map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0" />
-                        <span className="font-medium">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Technical Background Card */}
+              <div className="p-6 rounded-xl bg-card border border-border">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+                    <BookOpen size={20} />
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-foreground/60 font-medium">Expertise</p>
+                    <h3 className="text-lg font-display font-semibold text-foreground">Technical Background</h3>
+                  </div>
                 </div>
-
-                <div className="space-y-2">
-                  <p className="text-sm uppercase tracking-[0.24em] text-foreground/70 font-semibold">Impact</p>
-                  <h3 className="text-xl font-display font-semibold text-foreground">Key Achievements</h3>
-                  <ul className="space-y-2 text-foreground/90">
-                    {aboutData.achievements.map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0" />
-                        <span className="font-semibold">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="space-y-1.5">
+                  {aboutData.technicalBackground.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm">
+                      <span className="mt-1.5 h-1 w-1 rounded-full bg-accent flex-shrink-0" />
+                      <span className="text-foreground/90 leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <p className="text-sm uppercase tracking-[0.24em] text-foreground/70 font-semibold">Leadership</p>
-                  <h3 className="text-xl font-display font-semibold text-foreground">Roles</h3>
-                  <ul className="space-y-2 text-foreground/90">
-                    {aboutData.leadership.map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0" />
-                        <span className="font-semibold">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+              {/* Key Achievements Card */}
+              <div className="p-6 rounded-xl bg-card border border-border">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+                    <Award size={20} />
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-foreground/60 font-medium">Impact</p>
+                    <h3 className="text-lg font-display font-semibold text-foreground">Key Achievements</h3>
+                  </div>
                 </div>
+                <ul className="space-y-1.5">
+                  {aboutData.achievements.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm">
+                      <span className="mt-1.5 h-1 w-1 rounded-full bg-accent flex-shrink-0" />
+                      <span className="text-foreground/90 leading-relaxed font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-                <div className="space-y-3">
-                  <p className="text-sm uppercase tracking-[0.24em] text-foreground/70 font-semibold">Skills</p>
-                  <SkillBadges />
+              {/* Technical Leadership Card */}
+              <div className="p-6 rounded-xl bg-card border border-border">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+                    <Users size={20} />
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-foreground/60 font-medium">Leadership</p>
+                    <h3 className="text-lg font-display font-semibold text-foreground">Roles</h3>
+                  </div>
                 </div>
+                <ul className="space-y-1.5">
+                  {aboutData.leadership.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm">
+                      <span className="mt-1.5 h-1 w-1 rounded-full bg-accent flex-shrink-0" />
+                      <span className="text-foreground/90 leading-relaxed font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Skills Card */}
+              <div className="p-6 rounded-xl bg-card border border-border">
+                <div className="mb-4">
+                  <p className="text-xs uppercase tracking-wider text-foreground/60 font-medium mb-1">Skills</p>
+                  <h3 className="text-lg font-display font-semibold text-foreground">Technical Skills</h3>
+                </div>
+                <SkillBadges />
               </div>
             </div>
           </div>
