@@ -276,7 +276,7 @@ export const projects: Project[] = [
     category: "Spotlight",
     summary:
       "Modeled mangrove root-density effects on wave attenuation using Hansen Global Forest data, Python GIS, ANSYS/MATLAB shoreline simulations, and long-term land-loss scenarios to guide coastal resilience.",
-    image: "/projects/compost/compost-bin-01.jpeg",
+    image: "/projects/mangrove/mangrove-analysis.jpeg",
     tags: ["Geospatial", "Simulation", "Climate resilience"],
     content: {
       abstract:
@@ -288,9 +288,9 @@ export const projects: Project[] = [
       media: [
         {
           type: "image",
-          src: "/projects/compost/compost-bin-01.jpeg",
-          label: "Field instrumentation for validation",
-          description: "Real-world hardware setup used for sensor validation and soil sampling; avoids AI imagery while illustrating hands-on workflow.",
+          src: "/projects/mangrove/mangrove-analysis.jpeg",
+          label: "Mangrove area reduction analysis",
+          description: "Comparative analysis of mangrove area reduction across different spatial feature sets using satellite mapping and geospatial analysis.",
         },
       ],
     },
