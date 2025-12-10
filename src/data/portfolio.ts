@@ -188,7 +188,15 @@ export const projects: Project[] = [
       media: [
         { type: "image", src: "/projects/compost/compost-bin-01.jpeg", label: "Sensor deck" },
         { type: "image", src: "/projects/compost/compost-bin-02.jpeg", label: "Aeration setup" },
+        { type: "image", src: "/projects/compost/compost-bin-03.jpeg", label: "System assembly" },
+        { type: "image", src: "/projects/compost/compost-bin-04.jpeg", label: "System overview" },
         { type: "image", src: "/projects/compost/compost-bin-05.jpeg", label: "Control view" },
+        { type: "image", src: "/projects/compost/compost-bin-06.jpeg", label: "Component integration" },
+        { type: "image", src: "/projects/compost/compost-bin-07.jpeg", label: "Wiring and sensors" },
+        { type: "image", src: "/projects/compost/compost-bin-08.jpeg", label: "Field testing" },
+        { type: "image", src: "/projects/compost/compost-bin-09.jpeg", label: "Build process" },
+        { type: "image", src: "/projects/compost/compost-bin-11.jpeg", label: "Quality analysis" },
+        { type: "image", src: "/projects/compost/compost-bin-12.jpeg", label: "Final product" },
         {
           type: "video",
           src: "/projects/compost/videos/Khadify_DemoVideo_2025.mp4",
