@@ -14,7 +14,7 @@ export type MediaType = "image" | "video" | "pdf";
 export interface MediaItem {
   type: MediaType;
   src: string;
-  label: string;
+  label?: string;
   description?: string;
 }
 
