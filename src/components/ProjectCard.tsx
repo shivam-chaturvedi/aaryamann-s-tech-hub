@@ -1,7 +1,7 @@
 import { MediaItem, Project } from "@/data/portfolio";
 import { useState, useEffect } from "react";
 
-const fallbackImage = "/projects/spider-bot/beetlebot1.jpeg";
+const fallbackImage = "/projects/beetlebot/beetlebot1.jpeg";
 const fallbackMedia: MediaItem = {
   type: "image",
   src: fallbackImage,
@@ -25,8 +25,8 @@ const getBeetleBotVideos = (project: Project) => {
   if (project.id === "beetlebot") {
     const videos = project.content.media?.filter((item) => item.type === "video" && item.src.includes("beetlebot_demo")) ?? [];
     return videos.length > 0 ? videos : [
-      { type: "video" as const, src: "/projects/spider-bot/beetlebot_demo.mp4", label: "Demo 1" },
-      { type: "video" as const, src: "/projects/spider-bot/beetlebot_demo2.mp4", label: "Demo 2" },
+      { type: "video" as const, src: "/projects/beetlebot/beetlebot_demo.mp4", label: "Demo 1" },
+      { type: "video" as const, src: "/projects/beetlebot/beetlebot_demo2.mp4", label: "Demo 2" },
     ];
   }
   return [];

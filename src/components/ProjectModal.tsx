@@ -5,7 +5,7 @@ import { MediaItem, Project } from "@/data/portfolio";
 import { X, ExternalLink } from "lucide-react";
 import { ReactNode, useState } from "react";
 
-const fallbackImage = "/projects/spider-bot/beetlebot1.jpeg";
+const fallbackImage = "/projects/beetlebot/beetlebot1.jpeg";
 const fallbackMedia: MediaItem = {
   type: "image",
   src: fallbackImage,

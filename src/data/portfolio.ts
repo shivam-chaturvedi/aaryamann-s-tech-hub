@@ -84,7 +84,7 @@ export const projects: Project[] = [
     category: "Spotlight",
     summary:
       "Built RC+Wi-Fi quadruped with night vision and onboard audio; briefed DRDO & Naval Dockyard; earned Letter of Appreciation and Beetlebot talk to 200+ engineers.",
-    image: "/projects/spider-bot/beetlebot_demo.mp4",
+    image: "/projects/beetlebot/beetlebot_demo.mp4",
     tags: ["Rescue robotics", "Night vision", "RC control", "Field demos"],
     content: {
       abstract:
@@ -137,70 +137,70 @@ export const projects: Project[] = [
       media: [
         {
           type: "video",
-          src: "/projects/spider-bot/beetlebot_demo.mp4",
+          src: "/projects/beetlebot/beetlebot_demo.mp4",
           label: "Beetlebot Demo 1",
           description: "Quadruped rescue robot demonstration.",
         },
         {
           type: "video",
-          src: "/projects/spider-bot/beetlebot_demo2.mp4",
+          src: "/projects/beetlebot/beetlebot_demo2.mp4",
           label: "Beetlebot Demo 2",
           description: "Additional demonstration footage.",
         },
         {
           type: "image",
-          src: "/projects/spider-bot/beetlebot1.jpeg",
+          src: "/projects/beetlebot/beetlebot1.jpeg",
           label: "BeetleBot pose",
           description: "Quadruped ready for rescue entry.",
         },
         {
           type: "image",
-          src: "/projects/spider-bot/img2.jpeg",
+          src: "/projects/beetlebot/img2.jpeg",
           label: "Hardware assembly",
         },
         {
           type: "image",
-          src: "/projects/spider-bot/img3.jpeg",
+          src: "/projects/beetlebot/img3.jpeg",
           label: "Workshop build",
         },
         {
           type: "image",
-          src: "/projects/spider-bot/img4.jpeg",
+          src: "/projects/beetlebot/img4.jpeg",
           label: "BeetleBot in motion",
         },
         {
           type: "image",
-          src: "/projects/spider-bot/img5.jpeg",
+          src: "/projects/beetlebot/img5.jpeg",
           label: "IR night run",
         },
         {
           type: "image",
-          src: "/projects/spider-bot/img6.jpeg",
+          src: "/projects/beetlebot/img6.jpeg",
           label: "Field deployment",
         },
         {
           type: "image",
-          src: "/projects/fsai/beetlebot_at_fsai-01.jpeg",
+          src: "/projects/beetlebot/beetlebot_at_fsai-01.jpeg",
           label: "Beetlebot Conference setup",
         },
         {
           type: "image",
-          src: "/projects/fsai/beetlebot_at_fsai-03.jpeg",
+          src: "/projects/beetlebot/beetlebot_at_fsai-03.jpeg",
           label: "Beetlebot demonstration",
         },
         {
           type: "image",
-          src: "/projects/fsai/beetlebot_at_fsai-04.jpeg",
+          src: "/projects/beetlebot/beetlebot_at_fsai-04.jpeg",
           label: "Technical presentation",
         },
         {
           type: "image",
-          src: "/projects/fsai/beetlebot_at_fsai-06.jpeg",
+          src: "/projects/beetlebot/beetlebot_at_fsai-06.jpeg",
           label: "Conference showcase",
         },
         {
           type: "image",
-          src: "/projects/fsai/beetlebot_at_fsai-12.jpeg",
+          src: "/projects/beetlebot/beetlebot_at_fsai-12.jpeg",
           label: "Beetlebot event",
         },
         {
@@ -210,7 +210,7 @@ export const projects: Project[] = [
         },
         {
           type: "video",
-          src: "/projects/spider-bot/Spider_Bot_video.mp4",
+          src: "/projects/beetlebot/Spider_Bot_video.mp4",
           label: "BeetleBot demo",
           description: "Click to watch traversal and telemetry.",
         },
@@ -319,7 +319,7 @@ export const projects: Project[] = [
     category: "Research & Entrepreneurship",
     summary:
       "Captured CREST Gold (materials science enamel study) and Hippo Technotex internship delivering cost/thermal analysis for Relief Roof panels.",
-    image: "/projects/spider-bot/img2.jpeg",
+    image: "/projects/beetlebot/img2.jpeg",
     tags: ["Materials", "Thermal analysis", "Research"],
     content: {
       subProjects: [
@@ -343,7 +343,7 @@ export const projects: Project[] = [
     category: "Competitions & Leadership",
     summary:
       "Led FTC G-Force CAD, founded AI Club, ran Engineering Club build labs, and served as Tech Secretary for BIS Tech Fest with AV + web ops.",
-    image: "/projects/spider-bot/img3.jpeg",
+    image: "/projects/beetlebot/img3.jpeg",
     tags: ["FTC", "Club leadership", "Workshops"],
     content: {
       subProjects: [
@@ -377,11 +377,11 @@ export const projects: Project[] = [
     category: "Competitions & Leadership",
     summary:
       "IGCSE World Topper (Additional Math 2025); SASMO Gold; HKISO Silver; Waterloo Pascal Distinction; AP Microeconomics 5 (self-study).",
-    image: "/projects/fsai/fsai-speaker.jpeg",
+    image: "/projects/beetlebot/fsai-speaker.jpeg",
     tags: ["Olympiads", "Math", "Self-study"],
     content: {
       media: [
-        { type: "image", src: "/projects/fsai/fsai-speaker.jpeg", label: "Beetlebot Speaker Session" },
+        { type: "image", src: "/projects/beetlebot/fsai-speaker.jpeg", label: "Beetlebot Speaker Session" },
       ],
       subProjects: [
         { title: "IGCSE World Topper", description: "Additional Mathematics (2025)." },

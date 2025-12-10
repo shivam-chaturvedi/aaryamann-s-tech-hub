@@ -23,14 +23,14 @@ const Index = () => {
     }
   }, [isDark]);
   const heroImages = useMemo(() => [
-    { src: "/projects/fsai/beetlebot_at_fsai-02.jpeg", caption: "Beetlebot - Conference" },
+    { src: "/projects/beetlebot/beetlebot_at_fsai-02.jpeg", caption: "Beetlebot - Conference" },
     { src: "/projects/compost/compost-bin-01.jpeg", caption: "Khadify - Sensor Deck" },
-    { src: "/projects/fsai/beetlebot_at_fsai-05.jpeg", caption: "Beetlebot - Presentation" },
+    { src: "/projects/beetlebot/beetlebot_at_fsai-05.jpeg", caption: "Beetlebot - Presentation" },
     { src: "/projects/compost/compost-bin-02.jpeg", caption: "Khadify - Aeration Setup" },
     { src: "/projects/cyberdost-07.jpeg", caption: "CyberDost - Community Outreach" },
-    { src: "/projects/fsai/beetlebot_at_fsai-11.jpeg", caption: "Beetlebot - Demo" },
+    { src: "/projects/beetlebot/beetlebot_at_fsai-11.jpeg", caption: "Beetlebot - Demo" },
     { src: "/projects/compost/compost-bin-04.jpeg", caption: "Khadify - System Overview" },
-    { src: "/projects/fsai/fsai-speaker.jpeg", caption: "Beetlebot - Speaker Session" },
+    { src: "/projects/beetlebot/fsai-speaker.jpeg", caption: "Beetlebot - Speaker Session" },
     { src: "/projects/compost/compost-bin-08.jpeg", caption: "Khadify - Field Testing" },
     { src: "/projects/cyberdost-08.jpeg", caption: "CyberDost - Policy Engagement" },
     { src: "/projects/compost/compost-bin-11.jpeg", caption: "Khadify - Quality Analysis" },
