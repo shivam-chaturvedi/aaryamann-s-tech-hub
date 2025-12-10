@@ -44,6 +44,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               <video
                 controls
                 playsInline
+                muted
                 aria-label={heroLabel}
                 className="w-full h-full object-cover"
               >
@@ -166,6 +167,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                             <video
                               controls
                               playsInline
+                              muted
                               className="w-full h-full min-h-[150px] sm:min-h-[320px] object-cover"
                             >
                               <source src={media.src} type="video/mp4" />
@@ -203,7 +205,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Abstract */}
             {project.content.abstract && (
               <Section title="Abstract">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-xs sm:text-base">
                   {project.content.abstract}
                 </p>
               </Section>
@@ -212,7 +214,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Introduction */}
             {project.content.introduction && (
               <Section title="Introduction & Objective">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-xs sm:text-base">
                   {project.content.introduction}
                 </p>
               </Section>
@@ -221,7 +223,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Background */}
             {project.content.background && (
               <Section title="Background Research">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-xs sm:text-base">
                   {project.content.background}
                 </p>
               </Section>
@@ -230,7 +232,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Innovation */}
             {project.content.innovation && (
               <Section title="Innovation">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-xs sm:text-base">
                   {project.content.innovation}
                 </p>
               </Section>
@@ -241,7 +243,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               <Section title="Materials Used">
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {project.content.materials.map((material, index) => (
-                    <li key={index} className="flex items-start gap-2 text-muted-foreground text-sm">
+                    <li key={index} className="flex items-start gap-2 text-muted-foreground text-xs sm:text-sm">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
                       {material}
                     </li>
@@ -253,11 +255,11 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Hardware & Lab Requirements */}
             {project.content.hardwareGroups && project.content.hardwareGroups.length > 0 && (
               <Section title="Hardware & Lab Requirements">
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {project.content.hardwareGroups.map((group, index) => (
-                    <div key={index} className="space-y-2">
-                      <p className="font-medium text-foreground">{group.title}</p>
-                      <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
+                    <div key={index} className="space-y-1.5 sm:space-y-2">
+                      <p className="font-medium text-foreground text-xs sm:text-base">{group.title}</p>
+                      <ul className="list-disc pl-4 sm:pl-5 space-y-0.5 sm:space-y-1 text-xs sm:text-sm text-muted-foreground">
                         {group.items.map((item, itemIndex) => (
                           <li key={itemIndex}>{item}</li>
                         ))}
@@ -271,25 +273,25 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {/* Architecture Comparison */}
             {project.content.comparisons && project.content.comparisons.length > 0 && (
               <Section title="Comparative Architecture">
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {project.content.comparisons.map((stage, index) => (
-                    <div key={index} className="space-y-3">
-                      <p className="text-base font-medium text-foreground">{stage.title}</p>
+                    <div key={index} className="space-y-2 sm:space-y-3">
+                      <p className="text-xs sm:text-base font-medium text-foreground">{stage.title}</p>
                       {stage.note && (
-                        <p className="text-sm text-muted-foreground">{stage.note}</p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">{stage.note}</p>
                       )}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                         <div>
-                          <p className="font-medium text-sm text-foreground mb-2">Key Hardware Components</p>
-                          <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                          <p className="font-medium text-xs sm:text-sm text-foreground mb-1 sm:mb-2">Key Hardware Components</p>
+                          <ul className="list-disc pl-4 sm:pl-5 text-xs sm:text-sm text-muted-foreground space-y-0.5 sm:space-y-1">
                             {stage.hardwareComponents.map((component, compIndex) => (
                               <li key={compIndex}>{component}</li>
                             ))}
                           </ul>
                         </div>
                         <div>
-                          <p className="font-medium text-sm text-foreground mb-2">Functions</p>
-                          <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                          <p className="font-medium text-xs sm:text-sm text-foreground mb-1 sm:mb-2">Functions</p>
+                          <ul className="list-disc pl-4 sm:pl-5 text-xs sm:text-sm text-muted-foreground space-y-0.5 sm:space-y-1">
                             {stage.functions.map((fn, fnIndex) => (
                               <li key={fnIndex}>{fn}</li>
                             ))}
@@ -408,7 +410,7 @@ function VideoThumbnail({ video, projectId, index }: { video: MediaItem; project
           src={video.src}
           className="w-full h-full object-cover"
           preload="metadata"
-          muted={!isPlaying}
+          muted
           playsInline
           controls={isPlaying}
           onPlay={() => setIsPlaying(true)}
