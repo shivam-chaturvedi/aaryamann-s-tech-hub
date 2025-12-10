@@ -3,7 +3,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectModal } from "@/components/ProjectModal";
 import { SkillBadges } from "@/components/SkillBadges";
 import { projects, aboutData, contactData } from "@/data/portfolio";
-import { MapPin, Mail, Linkedin, Award, BookOpen, Users, ChevronLeft, ChevronRight, GraduationCap } from "lucide-react";
+import { MapPin, Mail, Linkedin, Award, BookOpen, Users, ChevronLeft, ChevronRight, GraduationCap, FileText } from "lucide-react";
 import type { Project } from "@/data/portfolio";
 import { Footer } from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -82,14 +82,28 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Dark Mode Toggle */}
-      <button
-        onClick={() => setIsDark(!isDark)}
-        className="fixed top-4 right-4 z-50 w-12 h-12 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
-        aria-label="Toggle dark mode"
-      >
-        <span className="text-2xl">{isDark ? "🌙" : "☀️"}</span>
-      </button>
+      {/* Top Right Buttons */}
+      <div className="fixed top-4 right-4 z-50 flex gap-3">
+        {/* Resume Button */}
+        <a
+          href="/Aaryamann_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
+          aria-label="View Resume"
+          title="View Resume"
+        >
+          <FileText size={20} className="text-foreground" />
+        </a>
+        {/* Dark Mode Toggle */}
+        <button
+          onClick={() => setIsDark(!isDark)}
+          className="w-12 h-12 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent/10 transition-colors"
+          aria-label="Toggle dark mode"
+        >
+          <span className="text-2xl">{isDark ? "🌙" : "☀️"}</span>
+        </button>
+      </div>
       <main className="flex-1">
         {/* Hero Banner */}
         <section className="relative h-80 md:h-96 lg:h-[32rem] overflow-hidden">
