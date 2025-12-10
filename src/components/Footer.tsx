@@ -16,7 +16,7 @@ export function Footer() {
               <span className="font-display font-semibold text-foreground">Aaryamann Goenka</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Young Engineer building innovative solutions in Robotics, AI, and IoT.
+              Aspiring engineer, tinkering with new frontiers in Robotics, Environment, and IoT.
             </p>
           </div>
 
