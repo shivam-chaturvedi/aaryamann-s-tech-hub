@@ -136,8 +136,6 @@ export const projects: Project[] = [
       ],
       media: [
         {
-          type: "image",
-        {
           type: "video",
           src: "/projects/spider-bot/beetlebot_demo.mp4",
           label: "Beetlebot Demo 1",
