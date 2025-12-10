@@ -421,7 +421,7 @@ export const projects: Project[] = [
         {
           title: "Head Boy & Event Ops",
           description:
-            "Ran elections, investiture, NGO fair, showcases, and AV coordination; liaison across faculty, students, and parents.",
+            "Ran elections, investiture, NGO fair, showcases, and AV coordination; served as liaison across faculty, students, and parents.",
         },
         {
           title: "BIS Beholder Festival",
