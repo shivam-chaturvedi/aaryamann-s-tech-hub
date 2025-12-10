@@ -143,6 +143,16 @@ export const projects: Project[] = [
         },
         {
           type: "image",
+          src: "/projects/spider-bot/img2.jpeg",
+          label: "Hardware assembly",
+        },
+        {
+          type: "image",
+          src: "/projects/spider-bot/img3.jpeg",
+          label: "Workshop build",
+        },
+        {
+          type: "image",
           src: "/projects/spider-bot/img4.jpeg",
           label: "BeetleBot in motion",
         },
@@ -150,6 +160,36 @@ export const projects: Project[] = [
           type: "image",
           src: "/projects/spider-bot/img5.jpeg",
           label: "IR night run",
+        },
+        {
+          type: "image",
+          src: "/projects/spider-bot/img6.jpeg",
+          label: "Field deployment",
+        },
+        {
+          type: "image",
+          src: "/projects/fsai/beetlebot_at_fsai-01.jpeg",
+          label: "FSAI Conference setup",
+        },
+        {
+          type: "image",
+          src: "/projects/fsai/beetlebot_at_fsai-03.jpeg",
+          label: "FSAI demonstration",
+        },
+        {
+          type: "image",
+          src: "/projects/fsai/beetlebot_at_fsai-04.jpeg",
+          label: "Technical presentation",
+        },
+        {
+          type: "image",
+          src: "/projects/fsai/beetlebot_at_fsai-06.jpeg",
+          label: "Conference showcase",
+        },
+        {
+          type: "image",
+          src: "/projects/fsai/beetlebot_at_fsai-12.jpeg",
+          label: "FSAI event",
         },
         {
           type: "video",
