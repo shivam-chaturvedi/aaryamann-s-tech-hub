@@ -73,6 +73,7 @@ export function ProjectCard({ project, onClick, index }: ProjectCardProps) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             autoPlay
             muted
+            loop
             playsInline
           />
         ) : project.image && project.image.endsWith('.mp4') ? (
