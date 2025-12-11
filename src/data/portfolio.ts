@@ -216,6 +216,11 @@ export const projects: Project[] = [
           src: "/projects/observership_naval.jpeg",
         },
         {
+          type: "image",
+          src: "/projects/navy_presentation.jpeg",
+          label: "Naval Presentation",
+        },
+        {
           type: "video",
           src: "/projects/beetlebot/Spider_Bot_video.mp4",
           label: "BeetleBot Demo",
@@ -249,6 +254,7 @@ export const projects: Project[] = [
         "CQS ML model",
       ],
       media: [
+        { type: "image", src: "/projects/compost/building_compost_bin.jpeg", label: "Building Khadify" },
         { type: "image", src: "/projects/compost/compost-bin-01.jpeg", label: "Sensor deck" },
         { type: "image", src: "/projects/compost/compost-bin-02.jpeg", label: "Aeration setup" },
         { type: "image", src: "/projects/compost/compost-bin-03.jpeg", label: "System assembly" },
@@ -354,9 +360,13 @@ export const projects: Project[] = [
     category: "Competitions & Leadership",
     summary:
       "Led FTC G-Force CAD, founded AI Club, ran Engineering Club build labs, and served as Tech Secretary for BIS Tech Fest with AV + web ops.",
-    image: "/projects/beetlebot/img3.jpeg",
+    image: "/projects/ftc/ftc_robotics_aaryaman_goenka.jpeg",
     tags: ["FTC", "Club leadership", "Workshops"],
     content: {
+      media: [
+        { type: "image", src: "/projects/ftc/ftc_robotics_aaryaman_goenka.jpeg" },
+        { type: "image", src: "/projects/ftc/building_FTC_robotics.jpeg" },
+      ],
       subProjects: [
         {
           title: "FIRST Tech Challenge (G-Force)",
@@ -376,7 +386,7 @@ export const projects: Project[] = [
         {
           title: "Tech Secretary",
           description:
-            "Produced BIS Tech Fest “Tech for All”; built tech escape room, expert panels, AV systems, and website updates.",
+            "Produced BIS Tech Fest "Tech for All"; built tech escape room, expert panels, AV systems, and website updates.",
         },
       ],
     },
@@ -388,11 +398,14 @@ export const projects: Project[] = [
     category: "Competitions & Leadership",
     summary:
       "IGCSE World Topper (Additional Math 2025); SASMO Gold; HKISO Silver; Waterloo Pascal Distinction; AP Microeconomics 5 (self-study).",
-    image: "/projects/beetlebot/fsai-speaker.jpeg",
+    image: "/projects/STEM_Olympiads_Academic_Achievements.jpeg",
     tags: ["Olympiads", "Math", "Self-study"],
     content: {
       media: [
-        { type: "image", src: "/projects/beetlebot/fsai-speaker.jpeg", label: "Beetlebot Speaker Session" },
+        { type: "image", src: "/projects/STEM_Olympiads_Academic_Achievements.jpeg", label: "STEM Olympiads & Academic Achievements" },
+        { type: "image", src: "/projects/hkiso_silver_award.jpeg", label: "HKISO Silver Award" },
+        { type: "image", src: "/projects/crest_gold_award.jpeg", label: "CREST Gold Award" },
+        { type: "image", src: "/projects/certificates/pascal_award.jpeg", label: "Waterloo Pascal Distinction" },
       ],
       subProjects: [
         { title: "IGCSE World Topper", description: "Additional Mathematics (2025)." },
@@ -444,6 +457,9 @@ export const projects: Project[] = [
         { type: "image", src: "/projects/cyberdost-08.jpeg" },
         { type: "image", src: "/projects/cyberdost_smiley.jpeg" },
         { type: "image", src: "/projects/cyberdost_webinar.jpeg" },
+        { type: "image", src: "/projects/cyberdost/cyberdost_with_school_staff.jpeg" },
+        { type: "image", src: "/projects/cyberdost/cyberdost_with_staff.jpeg" },
+        { type: "image", src: "/projects/cyberdost/zoom_webinar_cyberdost.jpeg" },
         {
           type: "pdf",
           src: "/docs/Cyberbullying Awareness and Prevention in India.pdf",
@@ -500,6 +516,7 @@ export const projects: Project[] = [
     content: {
       media: [
         { type: "image", src: "/projects/trek_expedition_NOLS_USA.jpeg", label: "NOLS Expedition" },
+        { type: "image", src: "/projects/trekking_hill.jpeg", label: "Trekking Expedition" },
         { type: "image", src: "/projects/observership_naval.jpeg", label: "Naval Dockyard Observership" },
       ],
       subProjects: [

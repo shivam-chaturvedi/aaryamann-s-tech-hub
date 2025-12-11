@@ -28,11 +28,13 @@ const Index = () => {
     { src: "/projects/beetlebot/beetlebot_at_fsai-05.jpeg", caption: "Beetlebot - Presentation" },
     { src: "/projects/compost/compost-bin-02.jpeg", caption: "Khadify - Aeration Setup" },
     { src: "/projects/cyberdost-07.jpeg", caption: "CyberDost - Community Outreach" },
+    { src: "/projects/hkiso_silver_award.jpeg", caption: "HKISO Silver Award" },
     { src: "/projects/beetlebot/beetlebot_at_fsai-11.jpeg", caption: "Beetlebot - Demo" },
     { src: "/projects/compost/compost-bin-04.jpeg", caption: "Khadify - System Overview" },
     { src: "/projects/beetlebot/fsai-speaker.jpeg", caption: "Beetlebot - Speaker Session" },
     { src: "/projects/compost/compost-bin-08.jpeg", caption: "Khadify - Field Testing" },
     { src: "/projects/cyberdost-08.jpeg", caption: "CyberDost - Policy Engagement" },
+    { src: "/projects/crest_gold_award.jpeg", caption: "CREST Gold Award" },
     { src: "/projects/compost/compost-bin-11.jpeg", caption: "Khadify - Quality Analysis" },
     { src: "/projects/compost/compost-bin-12.jpeg", caption: "Khadify - Final Product" },
   ], []);
