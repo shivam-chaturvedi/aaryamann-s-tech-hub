@@ -12,7 +12,58 @@ const fallbackMedia: MediaItem = {
   label: "Beetel Bot hero",
 };
 
+const heroMediaOverrides: Record<string, MediaItem> = {
+  "beetlebot": {
+    type: "image",
+    src: "/projects/beetlebot/beetlebot_at_fsai-05.jpeg",
+    label: "Beetlebot Field Demo",
+  },
+  "smart-compost": {
+    type: "image",
+    src: "/projects/compost/compost-bin-11.jpeg",
+    label: "Quality analysis",
+  },
+  "coastal-erosion": {
+    type: "image",
+    src: "/projects/trek_expedition_NOLS_USA.jpeg",
+    label: "Trek Expedition",
+  },
+  "research-innovation": {
+    type: "image",
+    src: "/projects/crest_gold_award.jpeg",
+    label: "CREST Gold Award",
+  },
+  "robotics-leadership": {
+    type: "image",
+    src: "/projects/ftc/building_FTC_robotics.jpeg",
+    label: "Building FTC Robotics",
+  },
+  "stem-olympiads": {
+    type: "image",
+    src: "/projects/hkiso_silver_award.jpeg",
+    label: "HKISO Silver Award",
+  },
+  "tech-fairs-outreach": {
+    type: "image",
+    src: "/projects/compost/compost-bin-06.jpeg",
+    label: "BIS Tech Fair Exhibit",
+  },
+  "cyber-advocacy": {
+    type: "image",
+    src: "/projects/cyberdost/zoom_webinar_cyberdost.jpeg",
+    label: "CyberDost Webinar",
+  },
+  "leadership-community": {
+    type: "image",
+    src: "/projects/compost/WhatsApp Image 2025-12-08 at 20.07.14.jpeg",
+    label: "BIS Beholder Festival",
+  },
+};
+
 const getHeroMedia = (project: Project) => {
+  if (heroMediaOverrides[project.id]) {
+    return heroMediaOverrides[project.id];
+  }
   // Find first image that is different from the thumbnail
   const imageMedia = project.content.media?.find((item) => 
     item.type === "image" && item.src !== project.image
@@ -47,54 +98,54 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-[95vw] max-w-4xl max-h-[90vh] p-0 overflow-hidden flex flex-col">
-        <ScrollArea className="flex-1 overflow-y-auto">
-          {/* Hero Media */}
-          <div className="relative aspect-video sm:max-h-[420px] h-[30vh] sm:h-auto">
-            {isHeroVideo ? (
-              <video
-                controls
-                playsInline
-                muted
-                aria-label={heroLabel}
-                className="w-full h-full object-cover"
-              >
-                <source src={heroMedia.src} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <img
-                src={heroMedia.src}
-                alt={heroLabel}
-                className="w-full h-full object-cover"
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-            
-            {/* Close Button */}
-            <DialogClose asChild>
-              <button
-                onClick={onClose}
-                className="absolute top-2 right-2 sm:top-3 sm:right-3 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 flex items-center justify-center transition-colors shadow-lg z-20 border-2 border-black/20"
-                aria-label="Close project"
-              >
-                <X size={16} className="sm:w-5 sm:h-5 text-black font-bold" strokeWidth={3} />
-              </button>
-            </DialogClose>
+      <DialogContent className="w-[95vw] max-w-4xl max-h-[90vh] p-0 overflow-hidden flex flex-col gap-0">
+        {/* Hero Media */}
+        <div className="relative aspect-video sm:max-h-[420px] h-[30vh] sm:h-auto">
+          {isHeroVideo ? (
+            <video
+              controls
+              playsInline
+              muted
+              aria-label={heroLabel}
+              className="w-full h-full object-cover block"
+            >
+              <source src={heroMedia.src} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <img
+              src={heroMedia.src}
+              alt={heroLabel}
+              className="w-full h-full object-cover block"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+          
+          {/* Close Button */}
+          <DialogClose asChild>
+            <button
+              onClick={onClose}
+              className="absolute top-2 right-2 sm:top-3 sm:right-3 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 flex items-center justify-center transition-colors shadow-lg z-20 border-2 border-black/20"
+              aria-label="Close project"
+            >
+              <X size={16} className="sm:w-5 sm:h-5 text-black font-bold" strokeWidth={3} />
+            </button>
+          </DialogClose>
 
-            {/* Title Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6">
-              <span className="px-2 py-0.5 sm:px-3 sm:py-1 text-[9px] sm:text-xs font-medium rounded-full bg-accent text-accent-foreground mb-1.5 sm:mb-3 inline-block">
-                {project.category}
-              </span>
-              <DialogHeader>
-                <DialogTitle className="text-base sm:text-2xl md:text-3xl font-display text-foreground leading-tight">
-                  {project.title}
-                </DialogTitle>
-              </DialogHeader>
-            </div>
+          {/* Title Overlay */}
+          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6">
+            <span className="px-2 py-0.5 sm:px-3 sm:py-1 text-[9px] sm:text-xs font-medium rounded-full bg-accent text-accent-foreground mb-1.5 sm:mb-3 inline-block">
+              {project.category}
+            </span>
+            <DialogHeader>
+              <DialogTitle className="text-base sm:text-2xl md:text-3xl font-display text-foreground leading-tight">
+                {project.title}
+              </DialogTitle>
+            </DialogHeader>
           </div>
+        </div>
 
+        <ScrollArea className="flex-1 overflow-y-auto">
           {/* Content */}
           <div className="p-3 sm:p-6 space-y-3 sm:space-y-6">
             {/* Tags */}

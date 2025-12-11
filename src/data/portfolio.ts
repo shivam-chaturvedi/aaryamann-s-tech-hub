@@ -5,6 +5,7 @@ export interface Project {
   category: string;
   summary: string;
   image: string;
+  thumbnail?: string;
   tags: string[];
   content: ProjectContent;
 }
@@ -254,8 +255,9 @@ export const projects: Project[] = [
         "CQS ML model",
       ],
       media: [
-        { type: "image", src: "/projects/compost/building_compost_bin.jpeg", label: "Building Khadify" },
         { type: "image", src: "/projects/compost/compost-bin-01.jpeg", label: "Sensor deck" },
+        { type: "image", src: "/projects/compost/compost-bin-12.jpeg", label: "Final product" },
+        { type: "image", src: "/projects/compost/building_compost_bin.jpeg", label: "Building Khadify" },
         { type: "image", src: "/projects/compost/compost-bin-02.jpeg", label: "Aeration setup" },
         { type: "image", src: "/projects/compost/compost-bin-03.jpeg", label: "System assembly" },
         { type: "image", src: "/projects/compost/compost-bin-04.jpeg", label: "System overview" },
@@ -265,7 +267,6 @@ export const projects: Project[] = [
         { type: "image", src: "/projects/compost/compost-bin-08.jpeg", label: "Field testing" },
         { type: "image", src: "/projects/compost/compost-bin-09.jpeg", label: "Build process" },
         { type: "image", src: "/projects/compost/compost-bin-11.jpeg", label: "Quality analysis" },
-        { type: "image", src: "/projects/compost/compost-bin-12.jpeg", label: "Final product" },
         {
           type: "video",
           src: "/projects/compost/videos/Khadify_DemoVideo_2025.mp4",
@@ -343,6 +344,7 @@ export const projects: Project[] = [
     summary:
       "Captured CREST Gold (materials science enamel study) and Hippo Technotex internship delivering cost/thermal analysis for Relief Roof panels.",
     image: "/projects/beetlebot/img2.jpeg",
+    thumbnail: "/projects/certificates/pascal_award.jpeg",
     tags: ["Materials", "Thermal analysis", "Research"],
     content: {
       media: [
@@ -370,6 +372,7 @@ export const projects: Project[] = [
     summary:
       "Led FTC G-Force CAD, founded AI Club, ran Engineering Club build labs, and served as Tech Secretary for BIS Tech Fest with AV + web ops.",
     image: "/projects/ftc/ftc_robotics_aaryaman_goenka.jpeg",
+    thumbnail: "/projects/beetlebot/beetlebot_at_fsai-12.jpeg",
     tags: ["FTC", "Club leadership", "Workshops"],
     content: {
       media: [
@@ -408,6 +411,7 @@ export const projects: Project[] = [
     summary:
       "IGCSE World Topper (Additional Math 2025); SASMO Gold; HKISO Silver; Waterloo Pascal Distinction; AP Microeconomics 5 (self-study).",
     image: "/projects/STEM_Olympiads_Academic_Achievements.jpeg",
+    thumbnail: "/projects/ftc/ftc_robotics_aaryaman_goenka.jpeg",
     tags: ["Olympiads", "Math", "Self-study"],
     content: {
       media: [
@@ -524,9 +528,11 @@ export const projects: Project[] = [
     summary:
       "Head Boy 2024–25; launched BIS Beholder film festival; executed school events; completed NOLS 65-mile expedition and multiple treks; advanced skier and scuba certified.",
     image: "/projects/trek_expedition_NOLS_USA.jpeg",
+    thumbnail: "/projects/trekking_hill.jpeg",
     tags: ["Leadership", "Operations", "Expeditions"],
     content: {
       media: [
+        { type: "image", src: "/projects/compost/WhatsApp Image 2025-12-08 at 20.07.14.jpeg", label: "BIS Beholder Festival" },
         { type: "image", src: "/projects/trekking_hill.jpeg", label: "Trekking Expedition" },
         { type: "image", src: "/projects/trek_expedition_NOLS_USA.jpeg", label: "NOLS Expedition" },
         { type: "image", src: "/projects/observership_naval.jpeg", label: "Naval Dockyard Observership" },

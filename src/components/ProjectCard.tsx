@@ -9,8 +9,17 @@ const fallbackMedia: MediaItem = {
 };
 
 const getProjectCardMedia = (project: Project) => {
+  if (project.thumbnail) {
+    return {
+      type: "image",
+      src: project.thumbnail,
+      label: project.title,
+    };
+  }
+
   const imageMedia = project.content.media?.find((item) => item.type === "image");
   if (imageMedia) return imageMedia;
+
   if (project.image) {
     return {
       type: "image",
@@ -18,6 +27,7 @@ const getProjectCardMedia = (project: Project) => {
       label: project.title,
     };
   }
+
   return fallbackMedia;
 };
 
