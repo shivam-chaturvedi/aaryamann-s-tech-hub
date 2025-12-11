@@ -386,7 +386,7 @@ export const projects: Project[] = [
         {
           title: "Tech Secretary",
           description:
-            "Produced BIS Tech Fest "Tech for All"; built tech escape room, expert panels, AV systems, and website updates.",
+            "Produced BIS Tech Fest \"Tech for All\"; built tech escape room, expert panels, AV systems, and website updates.",
         },
       ],
     },
