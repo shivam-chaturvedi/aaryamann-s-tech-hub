@@ -306,7 +306,8 @@ export const projects: Project[] = [
     category: "Spotlight",
     summary:
       "Modeled mangrove root-density effects on wave attenuation using Hansen Global Forest data, Python GIS, ANSYS/MATLAB shoreline simulations, and long-term land-loss scenarios to guide coastal resilience.",
-    image: "/projects/mangrove/mangrove-analysis.jpeg",
+    image: "/projects/navy_presentation.jpeg",
+    thumbnail: "/projects/navy_presentation.jpeg",
     tags: ["Geospatial", "Simulation", "Climate resilience"],
     content: {
       abstract:
@@ -344,7 +345,7 @@ export const projects: Project[] = [
     summary:
       "Captured CREST Gold (materials science enamel study) and Hippo Technotex internship delivering cost/thermal analysis for Relief Roof panels.",
     image: "/projects/beetlebot/img2.jpeg",
-    thumbnail: "/projects/certificates/pascal_award.jpeg",
+    thumbnail: "/projects/crest_gold_award.jpeg",
     tags: ["Materials", "Thermal analysis", "Research"],
     content: {
       media: [
@@ -372,7 +373,7 @@ export const projects: Project[] = [
     summary:
       "Led FTC G-Force CAD, founded AI Club, ran Engineering Club build labs, and served as Tech Secretary for BIS Tech Fest with AV + web ops.",
     image: "/projects/ftc/ftc_robotics_aaryaman_goenka.jpeg",
-    thumbnail: "/projects/beetlebot/beetlebot_at_fsai-12.jpeg",
+    thumbnail: "/projects/ftc/ftc_robotics_aaryaman_goenka.jpeg",
     tags: ["FTC", "Club leadership", "Workshops"],
     content: {
       media: [
@@ -411,7 +412,7 @@ export const projects: Project[] = [
     summary:
       "IGCSE World Topper (Additional Math 2025); SASMO Gold; HKISO Silver; Waterloo Pascal Distinction; AP Microeconomics 5 (self-study).",
     image: "/projects/STEM_Olympiads_Academic_Achievements.jpeg",
-    thumbnail: "/projects/ftc/ftc_robotics_aaryaman_goenka.jpeg",
+    thumbnail: "/projects/STEM_Olympiads_Academic_Achievements.jpeg",
     tags: ["Olympiads", "Math", "Self-study"],
     content: {
       media: [

@@ -25,8 +25,8 @@ const heroMediaOverrides: Record<string, MediaItem> = {
   },
   "coastal-erosion": {
     type: "image",
-    src: "/projects/trek_expedition_NOLS_USA.jpeg",
-    label: "Trek Expedition",
+    src: "/projects/navy_presentation.jpeg",
+    label: "Coastal Research Presentation",
   },
   "research-innovation": {
     type: "image",
@@ -40,8 +40,8 @@ const heroMediaOverrides: Record<string, MediaItem> = {
   },
   "stem-olympiads": {
     type: "image",
-    src: "/projects/hkiso_silver_award.jpeg",
-    label: "HKISO Silver Award",
+    src: "/projects/navy_presentation.jpeg",
+    label: "Coastal Research Presentation",
   },
   "tech-fairs-outreach": {
     type: "image",
