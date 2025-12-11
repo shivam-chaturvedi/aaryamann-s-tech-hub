@@ -316,15 +316,21 @@ export const projects: Project[] = [
         "Identified high-loss segments needing reforestation; produced policy-ready visuals to guide buffer planting and monitoring.",
       media: [
         {
-          type: "pdf",
-          src: "/projects/Mumbai_Mangroves_White_Paper.pdf",
-          label: "Mumbai Mangroves White Paper",
+          type: "image",
+          src: "/projects/navy_presentation.jpeg",
+          label: "Coastal Research Presentation",
+          description: "Presentation on coastal resilience and mangrove research.",
         },
         {
           type: "image",
           src: "/projects/mangrove/mangrove-analysis.jpeg",
           label: "Mangrove area reduction analysis",
           description: "Comparative analysis of mangrove area reduction across different spatial feature sets using satellite mapping and geospatial analysis.",
+        },
+        {
+          type: "pdf",
+          src: "/projects/Mumbai_Mangroves_White_Paper.pdf",
+          label: "Mumbai Mangroves White Paper",
         },
       ],
     },
@@ -458,9 +464,9 @@ export const projects: Project[] = [
     tags: ["Advocacy", "Policy", "Digital safety"],
     content: {
       media: [
+        { type: "image", src: "/projects/cyberdost-08.jpeg", label: "CyberDost Community" },
         { type: "image", src: "/projects/cyberdost-07.jpeg", label: "CyberDost Outreach" },
         { type: "image", src: "/projects/cyberdost-1.jpeg", label: "CyberDost" },
-        { type: "image", src: "/projects/cyberdost-08.jpeg", label: "CyberDost Community" },
         { type: "image", src: "/projects/cyberdost_smiley.jpeg", label: "CyberDost Smiley" },
         { type: "image", src: "/projects/cyberdost_webinar.jpeg", label: "CyberDost Webinar" },
         { type: "image", src: "/projects/cyberdost/cyberdost_with_school_staff.jpeg", label: "CyberDost with School Staff" },
