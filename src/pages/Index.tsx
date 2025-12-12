@@ -23,6 +23,9 @@ const Index = () => {
     }
   }, [isDark]);
   const heroImages = useMemo(() => [
+    { src: "/banner/b1.jpeg", caption: "Banner 1" },
+    { src: "/banner/b2.jpeg", caption: "Banner 2" },
+    { src: "/banner/b3.jpeg", caption: "Banner 3" },
     { src: "/projects/beetlebot/beetlebot_at_fsai-02.jpeg", caption: "Beetlebot - Conference" },
     { src: "/projects/compost/compost-bin-01.jpeg", caption: "Khadify - Sensor Deck" },
     { src: "/projects/beetlebot/beetlebot_at_fsai-05.jpeg", caption: "Beetlebot - Presentation" },
@@ -121,8 +124,7 @@ const Index = () => {
                     <img
                       src={item.src}
                       alt={item.caption}
-                      className="w-full h-full object-cover"
-                      style={{ objectPosition: 'center 30%' }}
+                      className="w-full h-full object-contain"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -147,7 +149,7 @@ const Index = () => {
               <div className="relative">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-4 border-background shadow-xl">
                   <img
-                    src="/profile-hero.png"
+                    src="/banner/profile.jpeg"
                     alt="Aaryamann Goenka"
                     className="w-full h-full object-cover"
                   />

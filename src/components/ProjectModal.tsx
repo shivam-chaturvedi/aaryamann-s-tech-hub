@@ -55,8 +55,8 @@ const heroMediaOverrides: Record<string, MediaItem> = {
   },
   "leadership-community": {
     type: "image",
-    src: "/projects/compost/WhatsApp Image 2025-12-08 at 20.07.14.jpeg",
-    label: "BIS Beholder Festival",
+    src: "/projects/STEM_Olympiads_Academic_Achievements.jpeg",
+    label: "STEM Olympiads & Academic Achievements",
   },
 };
 

@@ -588,7 +588,7 @@ export const aboutData = {
   },
   courses: [],
   leadership: [
-    "Head Boy, Bombay International School (2024–Present)",
+    "Head Boy, Bombay International School (2024–2025)",
     "Tech Secretary (2023–2024)",
     "Founder, AI Club",
     "President, Engineering Club",
