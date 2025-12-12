@@ -25,13 +25,13 @@ const heroMediaOverrides: Record<string, MediaItem> = {
   },
   "coastal-erosion": {
     type: "image",
-    src: "/projects/navy_presentation.jpeg",
-    label: "Coastal Research Presentation",
+    src: "/projects/mangrove/mangrove-analysis.jpeg",
+    label: "Mangrove area reduction analysis",
   },
   "research-innovation": {
     type: "image",
-    src: "/projects/crest_gold_award.jpeg",
-    label: "CREST Gold Award",
+    src: "/projects/cyberdost/research_innovation.jpeg",
+    label: "Research & Engineering Innovation",
   },
   "robotics-leadership": {
     type: "image",
@@ -100,14 +100,14 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="w-[95vw] max-w-4xl max-h-[90vh] p-0 overflow-hidden flex flex-col gap-0">
         {/* Hero Media */}
-        <div className="relative aspect-video sm:max-h-[420px] h-[30vh] sm:h-auto">
+        <div className="relative aspect-video sm:max-h-[420px] h-[30vh] sm:h-auto bg-black flex items-center justify-center">
           {isHeroVideo ? (
             <video
               controls
               playsInline
               muted
               aria-label={heroLabel}
-              className="w-full h-full object-cover block"
+              className="w-full h-full object-contain block"
             >
               <source src={heroMedia.src} type="video/mp4" />
               Your browser does not support the video tag.
@@ -116,7 +116,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             <img
               src={heroMedia.src}
               alt={heroLabel}
-              className="w-full h-full object-cover block"
+              className="w-full h-full object-contain block"
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />

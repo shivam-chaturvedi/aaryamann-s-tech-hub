@@ -307,7 +307,7 @@ export const projects: Project[] = [
     summary:
       "Modeled mangrove root-density effects on wave attenuation using Hansen Global Forest data, Python GIS, ANSYS/MATLAB shoreline simulations, and long-term land-loss scenarios to guide coastal resilience.",
     image: "/projects/navy_presentation.jpeg",
-    thumbnail: "/projects/navy_presentation.jpeg",
+    thumbnail: "/projects/thumb-memri.jpeg",
     tags: ["Geospatial", "Simulation", "Climate resilience"],
     content: {
       abstract:

@@ -53,6 +53,10 @@ export function ProjectCard({ project, onClick, index }: ProjectCardProps) {
   const isSpotlight = project.category === "Spotlight";
   const beetleBotVideos = getBeetleBotVideos(project);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const shouldUseCover =
+    project.id === "beetlebot" &&
+    (beetleBotVideos.length > 0 || (project.image && project.image.endsWith(".mp4")));
+  const mediaFitClass = shouldUseCover ? "object-cover" : "object-contain";
 
   useEffect(() => {
     if (beetleBotVideos.length > 1) {
@@ -74,13 +78,13 @@ export function ProjectCard({ project, onClick, index }: ProjectCardProps) {
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Image/Video */}
-      <div className="relative aspect-video overflow-hidden">
+      <div className="relative aspect-video overflow-hidden bg-black">
         {beetleBotVideos.length > 0 ? (
           <video
             id={`beetlebot-video-${project.id}`}
             key={beetleBotVideos[currentVideoIndex]?.src}
             src={beetleBotVideos[currentVideoIndex]?.src}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className={`w-full h-full ${mediaFitClass} transition-transform duration-500 group-hover:scale-110 bg-black`}
             autoPlay
             muted
             loop
@@ -89,7 +93,7 @@ export function ProjectCard({ project, onClick, index }: ProjectCardProps) {
         ) : project.image && project.image.endsWith('.mp4') ? (
           <video
             src={project.image}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className={`w-full h-full ${mediaFitClass} transition-transform duration-500 group-hover:scale-110 bg-black`}
             autoPlay
             loop
             muted
@@ -99,7 +103,7 @@ export function ProjectCard({ project, onClick, index }: ProjectCardProps) {
           <img
             src={cardMedia.src}
             alt={cardMedia.label ?? project.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className={`w-full h-full ${mediaFitClass} transition-transform duration-500 group-hover:scale-110 bg-black`}
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
